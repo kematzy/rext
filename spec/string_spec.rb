@@ -4,6 +4,16 @@ require 'rext/string'
 describe String do
 
   describe "helpers" do
+    describe "#add_class" do
+      it "should add a word that does not exist" do
+        'foo'.add_class('bar').should == 'foo bar'
+      end
+      
+      it "should not add the same word twice" do
+        'foo-bar bar'.add_class('bar').should == 'foo-bar bar'
+      end
+    end
+    
     describe "#wrap" do
       it "should wrap a string" do
         'foo'.wrap('|').should == '|foo|'
