@@ -1,13 +1,7 @@
 
 == Major:
 
-* Add Time DSL / document / relative time etc
-* Finish / refactor BNL / document it better
-* mini page / screencast (add all screencasts to Visionmedia gh page?)
-* add more castings to BNL like :list, :digit :number :digits :float (look at ragel defaults) :alnum :regexp(/asdfsd/) :set (like enum but many) test all these
-* Add Daemonize helper 
-* Documentation
-* BlankSlate or BasicObject 1.9 (facets?)
+* to_time for integer/time
 
 == Minor:
 
