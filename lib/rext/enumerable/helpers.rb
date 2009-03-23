@@ -1,4 +1,5 @@
 
+require 'rext/object/helpers'
 require 'rext/proc/helpers'
 
 module Enumerable
@@ -36,7 +37,7 @@ module Enumerable
   def proxy meth
     Proxy.new self, meth
   end
-  
+    
   ##
   # Return a hash grouped by +block+.
   #
@@ -47,7 +48,7 @@ module Enumerable
   #   words.group_by { length }              # => {3=>["foo", "bar"], 4=>["just", "some"]}
   #   words.group_by.length                  # => {3=>["foo", "bar"], 4=>["just", "some"]}
   #
-  
+
   def group_by &block
     return proxy(:group_by) unless block
     inject({}) do |hash, value|
@@ -68,7 +69,7 @@ module Enumerable
   #
   
   def every &block
-    block ? Proxy.new(self, :map).instance_eval(&block) : Proxy.new(self, :map)
+    block ? proxy(:map).instance_eval(&block) : proxy(:map)
   end
   
 end
