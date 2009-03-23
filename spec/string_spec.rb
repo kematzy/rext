@@ -25,10 +25,18 @@ describe String do
     end
     
     describe "#start_with?" do
-      it "should check if a string starts with a string" do
+      it "should check if a string starts with another" do
         'foo bar'.start_with?('foo').should be_true
         ' foo bar'.start_with?('foo').should_not be_true
         'bar foo'.start_with?('foo').should_not be_true
+      end
+    end
+    
+    describe "#end_with?" do
+      it "should check if a string ends with another" do
+        'foo bar'.end_with?('bar').should be_true
+        'foo bar '.end_with?('bar').should_not be_true
+        'bar foo'.end_with?('bar').should_not be_true
       end
     end
   

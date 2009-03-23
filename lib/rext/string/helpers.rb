@@ -58,7 +58,19 @@ class String
   def start_with? string
     index(string) == 0
   end
+  
+  ##
+  # Check if a string ends with another +string+.
+  #
+  # === Examples
+  #
+  #   'foo bar'.end_with? 'bar'  # => true
+  #
 
+  def end_with? string
+    index(string) == length - string.length
+  end
+  
   ##
   # Determines if a string is plural.
   #
