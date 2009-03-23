@@ -4,6 +4,43 @@ require 'extlib'
 class String
   
   ##
+  # Returns a File instance.
+  #
+  # === Examples
+  #
+  #   'History.rdoc'.file.mtime
+  #
+  
+  def file
+    File.new self
+  end
+  
+  ##
+  # Returns a Pathname instance.
+  #
+  # === Examples
+  #
+  #   'lib'.path.join('foo').expand_path
+  #
+  
+  def path
+    require 'pathname'
+    Pathname.new self
+  end
+  
+  ##
+  # Returns an array of files matching self.
+  #
+  # === Examples
+  #
+  #  'lib/**/*.rb'.files
+  #
+  
+  def files
+    Dir[self]
+  end
+  
+  ##
   # Merge the +word+ passed into the string. This
   # is useful for adding classes which may already 
   # exist in a string.

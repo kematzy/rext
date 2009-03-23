@@ -4,6 +4,24 @@ require 'rext/string'
 describe String do
   describe "helpers" do
     
+    describe "#path" do
+      it "should return an instance of a pathname" do
+        'History.rdoc'.path.should be_an_instance_of(Pathname)
+      end
+    end
+    
+    describe "#files" do
+      it "should return result of Dir glob" do
+        'lib/*.*'.files.should be_an_instance_of(Array)
+      end
+    end
+    
+    describe "#file" do
+      it "should return an instance of a file" do
+        'History.rdoc'.file.should be_an_instance_of(File)
+      end
+    end
+        
     describe "#add_class" do
       it "should add a word that does not exist" do
         'foo'.add_class('bar').should == 'foo bar'
