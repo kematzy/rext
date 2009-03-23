@@ -1,8 +1,9 @@
 
+$:.unshift 'lib'
+require 'rext'
 require 'rubygems'
 require 'rake'
 require 'echoe'
-require 'lib/rext.rb'
 
 Echoe.new "rext", Rext::VERSION do |p|
   p.author = "TJ Holowaychuk"
