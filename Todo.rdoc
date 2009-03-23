@@ -2,8 +2,7 @@
 == Major:
 
 * best method for allowing map and others to utilize instance_eval and Proxy
-* benchmarks
-* | as merge alias
+* move time stuff to Numeric not Integer
 * String#file ?
 * String#path ?
 
