@@ -4,6 +4,16 @@ require 'rext/string'
 describe String do
 
   describe "helpers" do
+    describe "#wrap" do
+      it "should wrap a string" do
+        'foo'.wrap('|').should == '|foo|'
+      end
+      
+      it "should wrap with optional suffix" do
+        'foo'.wrap('(', ')').should == '(foo)'
+      end
+    end
+    
     describe "#start_with?" do
       it "should check if a string starts with a string" do
         'foo bar'.start_with?('foo').should be_true
