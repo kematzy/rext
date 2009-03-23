@@ -1,5 +1,5 @@
 
-require 'rext/object/helpers'
+require 'rext/class/helpers'
 require 'rext/proc/helpers'
 
 module Enumerable
