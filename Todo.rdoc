@@ -3,7 +3,8 @@
 
 * | as merge alias
 * String#file ?
-* String#path ? 
+* String#path ?
+* indifferent_hash
 
 == Minor:
 
