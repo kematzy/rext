@@ -1,6 +1,7 @@
 
 == Major:
 
+* best method for allowing map and others to utilize instance_eval and Proxy
 * benchmarks
 * | as merge alias
 * String#file ?
