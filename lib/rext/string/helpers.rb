@@ -56,7 +56,7 @@ class String
   #
 
   def start_with? string
-    !!match(/^#{string}/)
+    index(string) == 0
   end
 
   ##

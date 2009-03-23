@@ -1,7 +1,7 @@
 
 == Major:
 
-* to_time for integer/time
+* | as merge alias
 
 == Minor:
 
