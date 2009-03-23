@@ -1,5 +1,4 @@
 
-require 'rubygems'
 require 'rack'
 
 class String
