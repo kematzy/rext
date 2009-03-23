@@ -14,11 +14,13 @@ methods such as String#camelize etc.
 
   require 'rext/string'
   require 'rext/hash'
+  ...
 
   # or 
 
   require 'rext/string/escape'
   require 'rext/enumerable/every'
+  ...
 
 == Extensions
 
