@@ -68,7 +68,7 @@ class String
   #
 
   def end_with? string
-    index(string) == length - string.length
+    rindex(string) == length - string.length
   end
   
   ##

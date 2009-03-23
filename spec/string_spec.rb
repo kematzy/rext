@@ -36,7 +36,7 @@ describe String do
       it "should check if a string ends with another" do
         'foo bar'.end_with?('bar').should be_true
         'foo bar '.end_with?('bar').should_not be_true
-        'bar foo'.end_with?('bar').should_not be_true
+        'bar foo foo'.end_with?('foo').should be_true
       end
     end
   

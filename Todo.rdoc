@@ -2,6 +2,8 @@
 == Major:
 
 * | as merge alias
+* String#file ?
+* String#path ? 
 
 == Minor:
 
