@@ -35,6 +35,10 @@ describe Enumerable do
       it "should group using instance evaluated block" do
         @enum.group_by { self.class }.should == @results
       end
+      
+      it "should group by method call" do
+        @enum.group_by.class.should == @results
+      end
     end
   end
   
