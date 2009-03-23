@@ -17,7 +17,7 @@ benchmark 'Proc', :times => $times do
     yield_or_eval_test { length }
     yield_or_eval_test { |foo| foo.length }
   end
-  report 'manual' do 
+  report 'manual arity check' do 
     manual { length }
     manual { |foo| foo.length }
   end
