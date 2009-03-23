@@ -3,6 +3,21 @@ require 'rext/proc/helpers'
 
 module Enumerable
   
+  ##
+  # Proxy
+  #
+  # The enumerable proxy class is utilized to
+  # allow methods such as #group_by, #map, and others
+  # to provide a method call alternative to a block.
+  #
+  # For example words.group_by { |word| word.length } can
+  # be replaced by words.group_by_.length
+  #
+  # === See
+  #
+  # * Enumerable#proxy
+  #
+  
   class Proxy
     instance_methods.each { |m| undef_method m unless m.match(/^__/) }
     
@@ -13,6 +28,13 @@ module Enumerable
     def method_missing meth, *args, &block
       @object.__send__(@method) { |o| o.__send__(meth, *args, &block) }
     end
+  end
+  
+  ##
+  # Shortcut for Proxy.new self, +meth+.
+  
+  def proxy meth
+    Proxy.new self, meth
   end
   
   ##
@@ -27,7 +49,7 @@ module Enumerable
   #
   
   def group_by &block
-    return Proxy.new self, :group_by unless block
+    return proxy(:group_by) unless block
     inject({}) do |hash, value|
       (hash[block.yield_or_eval(value)] ||= []) << value
       hash
