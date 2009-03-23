@@ -1,4 +1,9 @@
 
+=== 0.0.2 / 2009-03-23
+
+* Added Proc#yield_or_eval docs
+* Renamed class/helpers to module/helpers
+
 === 0.0.1 / 2009-03-23
 
 * Initial release
