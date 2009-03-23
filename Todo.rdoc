@@ -1,10 +1,10 @@
 
 == Major:
 
+* benchmarks
 * | as merge alias
 * String#file ?
 * String#path ?
-* indifferent_hash
 
 == Minor:
 

@@ -53,7 +53,14 @@ Below are the methods currently provided by Rext.
 * Date
   - to_time
 
+* Class
+  - chain
+
+* Proc
+  - yield_or_eval
+
 * Enumerable
+  - group_by
   - every ( Copyright http://github.com/mynyml )
 
 == License
