@@ -2,8 +2,8 @@
 require 'rext/string'
 
 describe String do
-
   describe "helpers" do
+    
     describe "#add_class" do
       it "should add a word that does not exist" do
         'foo'.add_class('bar').should == 'foo bar'
@@ -64,6 +64,6 @@ describe String do
         '$100,000'.digitize.to_i.should == 100_000
       end
     end
+    
   end
-  
 end
