@@ -41,6 +41,7 @@ describe String do
     describe "#digitize" do
       it "should leave only numeric characters" do
         '$100,000'.digitize.should == '100000'
+        '$100,000'.digitize.to_i.should == 100_000
       end
     end
   end

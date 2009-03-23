@@ -27,7 +27,7 @@ class Integer
   ##
   # Time before specified +time+, which defaults to now.
   #
-  # === Examples:
+  # === Examples
   #
   #   event = 10.days.ago
   #   15.minutes.before event
@@ -41,7 +41,7 @@ class Integer
   ##
   # Time since specified +time+, which defaults to now.
   #
-  # === Examples:
+  # === Examples
   #
   #   event = 1.year.ago
   #   3.months.since event

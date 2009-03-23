@@ -20,7 +20,7 @@ class String
   ##
   # Escape html entities. Shortcut for Rack::Utils.escape_html.
   #
-  # === Examples:
+  # === Examples
   #
   #   'im <strong>strong</strong>.escape_html  # => im &lt;strong&gt;strong&lt;/strong&gt;
   #
