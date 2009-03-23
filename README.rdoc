@@ -6,9 +6,53 @@ however it is de-coupled and free to use within your own project. As to complime
 existing extension libraries such as extlib, this library does not provide
 methods such as String#camelize etc.
 
-== Methods
+== Usage
 
-* Coming soong
+  require 'rext/all'
+
+  # or 
+
+  require 'rext/string'
+  require 'rext/hash'
+
+  # or 
+
+  require 'rext/string/escape'
+  require 'rext/enumerable/every'
+
+== Extensions
+
+* String
+  - url_encode
+  - url_decode
+  - html_escape
+  - merge_word / add_class
+  - digitize
+  - wrap
+  - start_with?
+  - end_with?
+  - plural?
+  - singular?
+  - first
+  - last
+
+* Integer
+  - seconds, minutes, hours, days, ...
+  - to_seconds, to_minutes, to_hours, ...
+  - ago / before
+  - since / from_now
+
+* Hash
+  - delete_at / extract!
+
+* Time
+  - to_time
+
+* Date
+  - to_time
+
+* Enumerable
+  - every
 
 == License
 
