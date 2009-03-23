@@ -23,11 +23,13 @@ module Enumerable
   # === Examples
   #    
   #   names = %w( tj scott joe bob )
-  #   names.map { |name| name.length }.join  # => 2533
-  #   names.every.length.join # => 2533
+  #   names.every.length.join          # => 2533
+  #   names.every.empty?.any?          # => false
+  #   names.every { length > 4 }.all?  # => true
   #
   
   def every &block
     block ? Every.new(self).instance_eval(&block) : Every.new(self)
   end
+  
 end
