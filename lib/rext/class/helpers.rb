@@ -1,5 +1,5 @@
 
-class Class
+class Module
   
   ##
   # Shortcut for including an anonymous module.

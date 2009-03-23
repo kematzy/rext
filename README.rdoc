@@ -37,8 +37,12 @@ Below are the methods currently provided by Rext.
   - singular?
   - first
   - last
+  - file
+  - files
+  - path
 
 * Integer
+  - ordanalize
   - seconds, minutes, hours, days, ...
   - to_seconds, to_minutes, to_hours, ...
   - ago / before
@@ -48,12 +52,13 @@ Below are the methods currently provided by Rext.
   - delete_at / extract!
 
 * Time
+  - in_words_since / in_words_since_now
   - to_time
 
 * Date
   - to_time
 
-* Class
+* Module
   - chain
 
 * Proc
