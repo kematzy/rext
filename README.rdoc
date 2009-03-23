@@ -22,6 +22,8 @@ methods such as String#camelize etc.
 
 == Extensions
 
+Below are the methods currently provided by Rext.
+
 * String
   - url_encode
   - url_decode
@@ -52,7 +54,7 @@ methods such as String#camelize etc.
   - to_time
 
 * Enumerable
-  - every
+  - every ( Copyright http://github.com/mynyml )
 
 == License
 
