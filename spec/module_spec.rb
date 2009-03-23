@@ -1,7 +1,7 @@
 
-require 'rext/class'
+require 'rext/module'
 
-describe Class do
+describe Module do
   describe "helpers" do
     
     describe "#chain" do
