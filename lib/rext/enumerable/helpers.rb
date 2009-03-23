@@ -23,6 +23,7 @@ module Enumerable
   #   words = %w( just some foo bar )
   #   words.group_by { |word| word.length }  # => {3=>["foo", "bar"], 4=>["just", "some"]}
   #   words.group_by { length }              # => {3=>["foo", "bar"], 4=>["just", "some"]}
+  #   words.group_by.length                  # => {3=>["foo", "bar"], 4=>["just", "some"]}
   #
   
   def group_by &block
