@@ -22,7 +22,11 @@ class Time
   def in_words_since time = Time.now
     return if self > time
     seconds = (time - self).to_i
-    pluralize = lambda { |string| n = seconds.send(:"to_#{string}s"); n == 1 ? "one #{string}" : "#{n} #{string}s" }
+    # TODO: abstract this out
+    pluralize = lambda do |type| 
+      n = seconds.send(:"to_#{type}s")
+      n == 1 ? "one #{type}" : "#{n} #{type}s"
+    end
     case seconds
     when 0..59                ; 'less than one minute'
     when 1.minute..59.minutes ; pluralize[:minute]
