@@ -1,6 +1,15 @@
 
 = Rext
 
+This gem is primarily used for the Evolution CMS project, and its dependencies,
+however it is de-coupled and free to use within your own project. As to compliment
+existing extension libraries such as extlib, this library does not provide
+methods such as String#camelize etc.
+
+== Methods
+
+* Coming soong
+
 == License
 
 (The MIT License)
