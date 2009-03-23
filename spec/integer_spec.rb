@@ -1,4 +1,6 @@
 
+require 'rext/integer'
+
 describe Integer do
   
   describe "time" do
