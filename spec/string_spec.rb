@@ -3,43 +3,45 @@ require 'rext/string'
 
 describe String do
 
-  describe "#start_with?" do
-    it "should check if a string starts with a string" do
-      'foo bar'.start_with?('foo').should be_true
-      ' foo bar'.start_with?('foo').should_not be_true
-      'bar foo'.start_with?('foo').should_not be_true
+  describe "helpers" do
+    describe "#start_with?" do
+      it "should check if a string starts with a string" do
+        'foo bar'.start_with?('foo').should be_true
+        ' foo bar'.start_with?('foo').should_not be_true
+        'bar foo'.start_with?('foo').should_not be_true
+      end
     end
-  end
   
-  describe "#plural?" do
-    it "should check if a string is plural" do
-      'cookies'.should be_plural
-      'cookie'.should_not be_plural
+    describe "#plural?" do
+      it "should check if a string is plural" do
+        'cookies'.should be_plural
+        'cookie'.should_not be_plural
+      end
     end
-  end
   
-  describe "#singular?" do
-    it "should check if a string is singular" do
-      'cookie'.should be_singular
-      'cookies'.should_not be_singular
+    describe "#singular?" do
+      it "should check if a string is singular" do
+        'cookie'.should be_singular
+        'cookies'.should_not be_singular
+      end
     end
-  end
   
-  describe "#first" do
-    it "should return the first character" do
-      'foo'.first.should == 'f'
+    describe "#first" do
+      it "should return the first character" do
+        'foo'.first.should == 'f'
+      end
     end
-  end
   
-  describe "#last" do
-    it "should return the last character" do
-      'bar'.last.should == 'r'
+    describe "#last" do
+      it "should return the last character" do
+        'bar'.last.should == 'r'
+      end
     end
-  end
   
-  describe "#digitize" do
-    it "should leave only numeric characters" do
-      '$100,000'.digitize.should == '100000'
+    describe "#digitize" do
+      it "should leave only numeric characters" do
+        '$100,000'.digitize.should == '100000'
+      end
     end
   end
   
