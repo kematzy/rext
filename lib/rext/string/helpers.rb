@@ -70,6 +70,16 @@ class String
   end
   
   ##
+  # Convert a string to camel-case, and optionally +capitalize_first_letter+.
+  
+  def camelize capitalize_first_letter = false
+    string = Extlib::Inflection.camelize(self)
+    return string if capitalize_first_letter
+    string[0,1] = string.first.downcase
+    string
+  end
+  
+  ##
   # Wrap a string with a +prefix+ and optional
   # +suffix+. When the +suffix+ is not present
   # the +prefix+ will be used.

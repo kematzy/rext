@@ -1,6 +1,7 @@
 
 == Major:
 
+* move inflection to string/inflection.rb
 * in_words_since should == to_words_since?
 * best method for allowing map and others to utilize instance_eval and Proxy
 * move time stuff to Numeric not Integer

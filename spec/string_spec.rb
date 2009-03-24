@@ -83,6 +83,16 @@ describe String do
         'bar'.last.should == 'r'
       end
     end
+    
+    describe "#camelize" do
+      it "should camel-case a string, leaving the first character lower by default" do
+        'some_foo_bar'.camelize.should == 'someFooBar'
+      end
+      
+      it "should camel-case a string, with first character capitalized" do
+        'some_foo_bar'.camelize(true).should == 'SomeFooBar'
+      end
+    end
   
     describe "#digitize" do
       it "should leave only numeric characters" do
