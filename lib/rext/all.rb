@@ -3,6 +3,7 @@
 # Load all extensions.
 #++
 
+require 'rext'
 require 'rext/module'
 require 'rext/proc'
 require 'rext/enumerable'

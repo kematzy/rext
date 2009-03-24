@@ -93,6 +93,16 @@ describe String do
         'some_foo_bar'.camelize(true).should == 'SomeFooBar'
       end
     end
+    
+    describe "#constantize" do
+      it "should convert a string to a constant" do
+        'Rext::VERSION'.constantize.should == Rext::VERSION
+      end
+      
+      it "should raise an error when an invalid constant name is passed" do
+        lambda { 'foo bar'.constantize }.should raise_error(NameError)
+      end
+    end
   
     describe "#digitize" do
       it "should leave only numeric characters" do

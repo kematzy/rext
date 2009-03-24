@@ -70,6 +70,13 @@ class String
   end
   
   ##
+  # Returns a constant when the string is a valid constant name.
+  
+  def constantize
+    Extlib::Inflection.constantize self
+  end
+  
+  ##
   # Convert a string to camel-case, and optionally +capitalize_first_letter+.
   
   def camelize capitalize_first_letter = false
