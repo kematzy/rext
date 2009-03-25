@@ -3,6 +3,14 @@ require 'extlib'
 
 class String
   
+  def base64_decode
+    unpack('m').first
+  end
+  
+  def base64_encode
+    [self].pack('m').chop
+  end
+  
   ##
   # Returns a File instance.
   #

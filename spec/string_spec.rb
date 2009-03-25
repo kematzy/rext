@@ -4,6 +4,19 @@ require 'rext/string'
 describe String do
   describe "helpers" do
     
+    describe "#base64_encode" do
+      it "should base64 encode a string" do
+        'tj'.base64_encode.should == 'dGo='
+        "foo \n bar\n\n".base64_encode.base64_decode.should == "foo \n bar\n\n"
+      end
+    end
+    
+    describe "#base64_decode" do
+      it "should decode a base64 string" do
+        'dGo='.base64_decode.should == 'tj'
+      end
+    end
+    
     describe "#path" do
       it "should return an instance of a pathname" do
         'History.rdoc'.path.should be_an_instance_of(Pathname)
