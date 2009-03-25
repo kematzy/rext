@@ -18,6 +18,7 @@ describe Rext do
       end
       
       it "should now allow additional ancestor methods to be accessed" do
+        module Kernel; def foo; end end
         class Object; def foo; end end
         lambda { @object.foo }.should raise_error(NoMethodError)
       end
