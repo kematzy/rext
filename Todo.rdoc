@@ -3,10 +3,9 @@
 
 * Add BasicObject support to < 1.9 unless defined? ::BasicObject, check out blankslate from stdlib
   * Replace in Enumerable::Proxy
-* in_words_since should == to_words_since? (alias)
 * Hash.new { |h,k| h[k.to_s] if k.is_a? Symbol }
-* best method for allowing map and others to utilize instance_eval and Proxy
 * move time stuff to Numeric not Integer
+* update all gems using rext to utilize latest methods
 
 == Minor:
 

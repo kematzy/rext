@@ -3,6 +3,7 @@ require 'rext/array'
 
 describe Array do
   describe "helpers" do
+    
     before :each do
       @items = %w( some foo bar )  
     end
