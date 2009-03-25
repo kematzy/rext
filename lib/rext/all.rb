@@ -4,6 +4,7 @@
 #++
 
 require 'rext'
+require 'rext/compat'
 require 'rext/module'
 require 'rext/proc'
 require 'rext/enumerable'
