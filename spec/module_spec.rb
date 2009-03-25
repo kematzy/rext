@@ -3,7 +3,6 @@ require 'rext/module'
 
 describe Module do
   describe "helpers" do
-    
     describe "#chain" do
       it "should allow chaining via super" do
         class Foo
@@ -33,6 +32,5 @@ describe Module do
         lambda { Foo.new.does_not_exist }.should raise_error(NoMethodError)
       end
     end
-    
   end
 end

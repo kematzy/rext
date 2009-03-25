@@ -4,4 +4,3 @@
 #++
 
 require 'rext/integer/helpers'
-require 'rext/integer/time'

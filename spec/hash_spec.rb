@@ -3,7 +3,6 @@ require 'rext/hash'
 
 describe Hash do
   describe "helpers" do
-    
     describe "#delete_at" do
       it "should delete several keys, returning their values when present" do
         options = { :foo => 1, :bar => 2 }
@@ -13,6 +12,5 @@ describe Hash do
         does_not_exist.should be_nil
       end
     end
-    
   end  
 end

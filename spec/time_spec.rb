@@ -3,7 +3,6 @@ require 'rext/time'
 
 describe Time do
   describe "helpers" do
-    
     describe "#in_words_since" do
       it "should convert time lost to words" do
         event = Time.now - 5.seconds
@@ -18,6 +17,5 @@ describe Time do
         event.in_words_since_now.should == 'hundreds of years'
       end
     end
-    
   end
 end

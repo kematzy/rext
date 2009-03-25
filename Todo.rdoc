@@ -4,8 +4,8 @@
 * Add BasicObject support to < 1.9 unless defined? ::BasicObject, check out blankslate from stdlib
   * Replace in Enumerable::Proxy
 * Hash.new { |h,k| h[k.to_s] if k.is_a? Symbol }
-* move time stuff to Numeric not Integer
 * update all gems using rext to utilize latest methods
+* more date related goodies and formats like Activesupport
 
 == Minor:
 
