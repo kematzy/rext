@@ -1,4 +1,11 @@
 
+=== 0.0.3 / 2009-03-25
+
+* Added String#base64_encode 
+* Added String#base64_decode 
+* Added String#constantize
+* Added String#camelize
+
 === 0.0.2 / 2009-03-23
 
 * Added Proc#yield_or_eval docs
