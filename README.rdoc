@@ -26,6 +26,11 @@ methods such as String#camelize etc.
 
 Below are the methods currently provided by Rext.
 
+* Object
+  - metaclass
+  - meta_def
+  - meta_eval
+
 * String
   - url_encode
   - url_decode
