@@ -29,6 +29,8 @@ Below are the methods currently provided by Rext.
 * String
   - url_encode
   - url_decode
+  - base64_encode
+  - base64_decode
   - html_escape
   - merge_word / add_class
   - digitize
