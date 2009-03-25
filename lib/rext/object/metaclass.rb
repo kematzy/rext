@@ -5,8 +5,9 @@ class Object
     class << self; self end
   end
   
-  def meta_eval &block
-    metaclass.instance_eval &block
+  def meta_eval string = nil, &block
+    return metaclass.class_eval(string) if string
+    metaclass.class_eval &block
   end
   
   def meta_def name, &block

@@ -19,6 +19,16 @@ describe Object do
         end
         object.foo.should == 'bar'
       end
+      
+      it "should accept a string to be evaluated" do
+        object = 'foo'
+        object.meta_eval <<-EOF
+          def foo
+            'bar'
+          end
+        EOF
+        object.foo.should == 'bar'
+      end
     end
     
     describe "#meta_def" do
