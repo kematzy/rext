@@ -49,6 +49,9 @@ Below are the methods currently provided by Rext.
 
 * Integer
   - ordanalize
+
+* Numeric
+  - bytes, kilobytes, etc
   - seconds, minutes, hours, days, ...
   - to_seconds, to_minutes, to_hours, ...
   - ago / before
