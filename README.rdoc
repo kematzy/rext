@@ -34,6 +34,8 @@ Below are the methods currently provided by Rext.
   - html_escape
   - merge_word / add_class
   - digitize
+  - camelize
+  - constantize
   - wrap
   - start_with?
   - end_with?
