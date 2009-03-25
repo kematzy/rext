@@ -77,6 +77,11 @@ Below are the methods currently provided by Rext.
   - group_by
   - every ( Copyright http://github.com/mynyml )
 
+== Compatibility
+
+Rext provides methods which support Ruby 1.8.x and 1.9.x, as
+well as forward compatibility for features such as BasicObject.
+
 == License
 
 (The MIT License)
