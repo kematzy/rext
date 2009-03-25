@@ -3,9 +3,25 @@ require 'extlib'
 
 class String
   
+  ##
+  # Return Base 64 decoded string.
+  #
+  # === Examples
+  #
+  #  'Y29va2llcw=='.base64_decode  # => cookies
+  #
+    
   def base64_decode
     unpack('m').first
   end
+  
+  ##
+  # Return Base 64 encoded string.
+  #
+  # === Examples
+  #
+  #  'cookies'.base64_encode  # => Y29va2llcw==
+  #
   
   def base64_encode
     [self].pack('m').chop
