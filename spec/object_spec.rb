@@ -24,8 +24,8 @@ describe Object do
     describe "#meta_def" do
       it "should define a method within the metaclass" do
         object = 'foo'
-        object.meta_def(:foo) { 'bar' }
-        object.foo.should == 'bar'
+        object.meta_def(:foo) { |*args| "bar #{ args.join(', ') }" }
+        object.foo(1,2,3).should == 'bar 1, 2, 3'
       end
     end
   end
