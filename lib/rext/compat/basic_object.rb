@@ -8,11 +8,12 @@ class BasicObject
   instance_methods.each { |m| hide(m) unless m.match(/^__/) }
 end
 
-class Object
-  extend Module.new {
-    def method_added name
-      BasicObject.hide name if self == Object
-      super
-    end
-  }
+module RemoveBasicObjectMethods
+  def method_added name
+    BasicObject.hide name if self == Object
+    super
+  end
 end
+
+Object.extend RemoveBasicObjectMethods
+Kernel.extend RemoveBasicObjectMethods
