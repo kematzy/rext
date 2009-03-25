@@ -177,6 +177,12 @@ class String
 
   ##
   # First +n+ character(s).
+  #
+  # === Examples
+  #
+  #   'foo'.first     # => f
+  #   'foo'.first(2)  # => fo
+  #
 
   def first n = 1
     self[0,n]
@@ -184,7 +190,13 @@ class String
 
   ##
   # Last +n+ character(s).
-
+  #
+  # === Examples
+  #
+  #   'bar'.last     # => r
+  #   'bar'.last(2)  # => ar
+  #
+  
   def last n = 1
     self[-n, n]
   end
