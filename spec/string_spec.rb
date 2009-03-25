@@ -89,11 +89,19 @@ describe String do
       it "should return the first character" do
         'foo'.first.should == 'f'
       end
+      
+      it "should return n number of charcters" do
+        'foo'.first(2).should == 'fo'
+      end
     end
   
     describe "#last" do
       it "should return the last character" do
         'bar'.last.should == 'r'
+      end
+      
+      it "should return the last n number of characters" do
+        'bar'.last(2).should == 'ar'
       end
     end
     

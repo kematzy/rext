@@ -5,6 +5,8 @@
   * Replace in Enumerable::Proxy
 * Hash.new { |h,k| h[k.to_s] if k.is_a? Symbol }
 * update all gems using rext to utilize latest methods
+* add metaid-ish methods to Object or whatever
+* 1.9.x compatible
 * more date related goodies and formats like Activesupport
 
 == Minor:

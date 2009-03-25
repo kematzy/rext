@@ -176,17 +176,17 @@ class String
   end
 
   ##
-  # First character.
+  # First +n+ character(s).
 
-  def first 
-    self[0,1]
+  def first n = 1
+    self[0,n]
   end
 
   ##
-  # Last character.
+  # Last +n+ character(s).
 
-  def last
-    self[-1, 1]
+  def last n = 1
+    self[-n, n]
   end
   
 end
