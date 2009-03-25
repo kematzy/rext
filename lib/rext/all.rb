@@ -4,6 +4,7 @@
 #++
 
 require 'rext'
+require 'rext/object'
 require 'rext/compat'
 require 'rext/module'
 require 'rext/proc'

@@ -4,7 +4,6 @@
 * update all gems using rext to utilize latest methods
 * add metaid-ish methods to Object or whatever
 * 1.9.x compatibility (add all these in seperate files)
-* to_json etc (gem?)
 * memoize
 * more date related goodies and formats like Activesupport
 * indifferent hash Hash.new { |h,k| h[k.to_s] if k.is_a? Symbol }
