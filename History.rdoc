@@ -1,4 +1,16 @@
 
+=== 0.0.4 / 2009-03-25
+
+* Added Object#metaclass
+* Added Object#meta_eval
+* Added Object#meta_def
+* Added BasicObject for Ruby < 1.9
+* Added n param to String#first / last
+* Added byte conversion 1.byte, 6.kilobytes etc
+* Added form param to #to_time
+* Added Array#from / to
+* Moved time related methods from Integer to Numeric
+
 === 0.0.3 / 2009-03-25
 
 * Added String#base64_encode 
