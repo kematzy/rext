@@ -1,10 +1,16 @@
 
 = Rext
 
-This gem is primarily used for the Evolution CMS project, and its dependencies,
-however it is de-coupled and free to use within your own project. As to compliment
-existing extension libraries such as extlib, this library does not provide
-methods such as String#camelize etc.
+Rext is primarily used for the Evolution CMS project, and its dependencies,
+however it is de-coupled and free to use within your own project.
+
+== Motivations
+
+* ActiveSupport does not contain everything we need, and is messy IMO
+* Very easy to cherry-pick what you need
+* Provide better documentation
+* Attention to quality and performance
+* Abstraction of loosely coupled helpers used throughout Evolution and its sub-gems
 
 == Usage
 
@@ -86,14 +92,6 @@ Below are the methods currently provided by Rext.
 
 Rext provides methods which support Ruby 1.8.x and 1.9.x, as
 well as forward compatibility for features such as BasicObject.
-
-== Motivations
-
-* ActiveSupport does not contain everything we need, and is messy IMO
-* Very easy to cherry-pick what you need
-* Provide better documentation
-* Attention to quality and performance
-* Abstraction of loosely coupled helpers used throughout Evolution and its sub-gems
 
 == Contrib
 
