@@ -95,6 +95,11 @@ well as forward compatibility for features such as BasicObject.
 * Attention to quality and performance
 * Abstraction of loosely coupled helpers used throughout Evolution and its sub-gems
 
+== Contrib
+
+Feel free to fork Rext on github, or submit a ticket:
+http://visionmedia.lighthouseapp.com/projects/28074-rext/overview
+
 == License
 
 (The MIT License)
