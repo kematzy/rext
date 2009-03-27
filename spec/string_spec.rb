@@ -55,19 +55,19 @@ describe String do
       end
     end
     
-    describe "#start_with?" do
+    describe "#starts_with?" do
       it "should check if a string starts with another" do
-        'foo bar'.start_with?('foo').should be_true
-        ' foo bar'.start_with?('foo').should_not be_true
-        'bar foo'.start_with?('foo').should_not be_true
+        'foo bar'.starts_with?('foo').should be_true
+        ' foo bar'.starts_with?('foo').should_not be_true
+        'bar foo'.starts_with?('foo').should_not be_true
       end
     end
     
-    describe "#end_with?" do
+    describe "#ends_with?" do
       it "should check if a string ends with another" do
-        'foo bar'.end_with?('bar').should be_true
-        'foo bar '.end_with?('bar').should_not be_true
-        'bar foo foo'.end_with?('foo').should be_true
+        'foo bar'.ends_with?('bar').should be_true
+        'foo bar '.ends_with?('bar').should_not be_true
+        'bar foo foo'.ends_with?('foo').should be_true
       end
     end
   

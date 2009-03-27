@@ -130,23 +130,22 @@ class String
   #
   # === Examples
   #
-  #   'foo bar'.start_with? 'foo'  # => true
+  #   'foo bar'.starts_with? 'foo'  # => true
   #
 
-  def start_with? string
+  def starts_with? string
     index(string) == 0
   end
-  alias :starts_withs :start_with?
   
   ##
   # Check if a string ends with another +string+.
   #
   # === Examples
   #
-  #   'foo bar'.end_with? 'bar'  # => true
+  #   'foo bar'.ends_with? 'bar'  # => true
   #
 
-  def end_with? string
+  def ends_with? string
     rindex(string) == length - string.length
   end
   
