@@ -172,7 +172,7 @@ class String
   #
 
   def singular?
-    !plural?
+    not plural?
   end
 
   ##
