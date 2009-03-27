@@ -136,6 +136,7 @@ class String
   def start_with? string
     index(string) == 0
   end
+  alias :starts_withs :start_with?
   
   ##
   # Check if a string ends with another +string+.
