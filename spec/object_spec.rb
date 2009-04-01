@@ -39,4 +39,15 @@ describe Object do
       end
     end
   end
+  
+  describe "helpers" do
+    describe "#indifferent_hash" do
+      it "should return a hash indifferent to symbols or strings for key access" do
+        hash = indifferent_hash
+        hash['foo'] = 'foo'
+        hash[:foo].should == 'foo'
+        hash['foo'].should == 'foo'
+      end
+    end
+  end
 end
