@@ -55,6 +55,7 @@ Below are the methods currently provided by Rext.
   - singular?
   - first
   - last
+  - from
   - file
   - files
   - path

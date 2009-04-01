@@ -105,6 +105,12 @@ describe String do
       end
     end
     
+    describe "#from" do
+      it "should return all characters from n" do
+        'cookies'.from(3).should == 'kies'
+      end
+    end
+    
     describe "#camelize" do
       it "should camel-case a string, leaving the first character lower by default" do
         'some_foo_bar'.camelize.should == 'someFooBar'

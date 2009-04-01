@@ -201,4 +201,16 @@ class String
     self[-n, n]
   end
   
+  ##
+  # All characters after +n+.
+  #
+  # === Examples
+  #
+  #   '.css'.from(1)  #=> css
+  #
+  
+  def from n
+    self[n, length]
+  end
+  
 end
