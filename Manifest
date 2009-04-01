@@ -19,6 +19,7 @@ lib/rext/module.rb
 lib/rext/numeric/bytes.rb
 lib/rext/numeric/time.rb
 lib/rext/numeric.rb
+lib/rext/object/helpers.rb
 lib/rext/object/metaclass.rb
 lib/rext/object.rb
 lib/rext/proc/helpers.rb
@@ -50,4 +51,3 @@ tasks/benchmark.rake
 tasks/docs.rake
 tasks/gemspec.rake
 tasks/spec.rake
-Todo.rdoc

@@ -36,6 +36,7 @@ Below are the methods currently provided by Rext.
   - metaclass
   - meta_def
   - meta_eval
+  - indifferent_hash
 
 * String
   - url_encode
@@ -48,8 +49,8 @@ Below are the methods currently provided by Rext.
   - camelize
   - constantize
   - wrap
-  - start_with?
-  - end_with?
+  - starts_with?
+  - ends_with?
   - plural?
   - singular?
   - first

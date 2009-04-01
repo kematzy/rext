@@ -1,4 +1,12 @@
 
+=== 0.0.5 / 2009-04-01
+
+* Added Object#indifferent_hash [#3]
+* Added String#ends_with?
+* Added String#starts_with?
+* Refactored String#singular?
+* Removed Todo list, use lighthouse now
+
 === 0.0.4 / 2009-03-25
 
 * Added Object#metaclass
