@@ -59,6 +59,7 @@ Below are the methods currently provided by Rext.
   - file
   - files
   - path
+  - switchify
 
 * Integer
   - ordanalize

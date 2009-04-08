@@ -4,6 +4,20 @@ require 'rext/string'
 describe String do
   describe "helpers" do
     
+    describe "#switchify" do
+      it "should return a switch version of the string" do
+        'some_foo_bar'.switchify.should == '--some-foo-bar'
+      end
+      
+      it "should return small switches when only a single char" do
+        't'.switchify.should == '-t'
+      end
+      
+      it "should raise an InvalidSwitchError when length 0" do
+        lambda { ''.switchify }.should raise_error(String::InvalidSwitchError)
+      end
+    end
+    
     describe "#base64_encode" do
       it "should base64 encode a string" do
         'tj'.base64_encode.should == 'dGo='

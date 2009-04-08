@@ -213,4 +213,29 @@ class String
     self[n, length]
   end
   
+  ##
+  # Replace all underscores with hyphens.
+
+  def dasherize
+    tr '_', '-'
+  end
+  
+  ##
+  # Returns the switch equivilant of this string.
+  #
+  # === Examples
+  #
+  #  'foo_bar'.switchify         # => --foo-bar
+  #  'lots_of_foobar'.switchify  # => --lots-of-foobar
+  #  't'.switchify               # => -t
+  #  ''.switchify                # => InvalidSwitchError
+  #
+  
+  class InvalidSwitchError < StandardError; end
+
+  def switchify
+    raise InvalidSwitchError, 'switch must have a length > 0' if length.zero?
+    length > 1 ? "--#{dasherize}" : "-#{self}"
+  end
+    
 end
