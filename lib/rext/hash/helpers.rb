@@ -20,4 +20,23 @@ class Hash
   end
   alias :extract! :delete_at
   
+  ##
+  # Return an array of switches and their arguments.
+  #
+  # === Examples
+  #
+  #   { :use_foobar => true }.switchify   # => ['--use-foobar']
+  #   { :use_foobar => false }.switchify  # => []
+  #   { :interval => 15, :icon => :jpeg } # => ['--interval', '15', '--icon', 'jpeg']
+  #
+  
+  def switchify
+    inject [] do |args, (key, value)|
+      next args unless value
+      args << key.to_s.switchify
+      args << (String === value ? value.inspect : value.to_s) unless value === true
+      args
+    end
+  end
+  
 end

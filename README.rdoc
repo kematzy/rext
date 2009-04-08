@@ -73,6 +73,7 @@ Below are the methods currently provided by Rext.
 
 * Hash
   - delete_at / extract!
+  - switchify
 
 * Time
   - in_words_since / in_words_since_now

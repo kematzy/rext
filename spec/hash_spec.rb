@@ -12,5 +12,24 @@ describe Hash do
         does_not_exist.should be_nil
       end
     end
+    
+    describe "#switchify" do
+      it "should work with bools" do
+        { :use_foobar => true }.switchify.should == ['--use-foobar']
+        { :use_foobar => false }.switchify.should be_empty
+      end
+      
+      it "should stringify numbers and symbols" do
+        { :interval => 15, :icon => :jpeg }.switchify.should == ['--interval', '15', '--icon', 'jpeg']
+      end
+      
+      it "should work with little switches" do
+        { :T => true }.switchify.should == ['-T']
+      end
+      
+      it "should add quotes around strings" do
+        { :glob => 'lib/**/*.rb' }.switchify.should == ['--glob', '"lib/**/*.rb"']
+      end
+    end
   end  
 end
