@@ -1,4 +1,9 @@
 
+=== 0.0.8 / 2009-04-13
+
+* Added Array#chunk/in_groups_of
+* Added Array#pad
+
 === 0.0.7 / 2009-04-08
 
 * Added Hash#switchify
