@@ -36,6 +36,10 @@ describe Array do
       it "should pad with nil by default" do
         (1..5).to_a.in_groups_of(4).should == [[1,2,3,4], [5,nil,nil,nil]]
       end
+      
+      it "should not padd when pad_with is false" do
+        (1..6).to_a.in_groups_of(4, false).should == [[1,2,3,4], [5,6]]
+      end
     end
     
     describe "#pad" do
@@ -48,7 +52,7 @@ describe Array do
       end
       
       it "should do nothing when the array is of expected length" do
-        [1,2].pad(2).should == a
+        [1,2].pad(2).should == [1,2]
       end
     end
     
