@@ -32,6 +32,24 @@ describe Array do
         end
         chunks.should == [[1,2,3], [4,5,6], [7,8,9]]
       end
+      
+      it "should pad with nil by default" do
+        (1..5).to_a.in_groups_of(4).should == [[1,2,3,4], [5,nil,nil,nil]]
+      end
+    end
+    
+    describe "#pad" do
+      it "should pad with nil by default" do
+        [1,2].pad(4).should == [1, 2, nil, nil]
+      end
+      
+      it "should pad an with an object" do
+        [1,2].pad(3 ,'x').should == [1, 2, 'x']
+      end
+      
+      it "should do nothing when the array is of expected length" do
+        [1,2].pad(2).should == a
+      end
     end
     
   end
