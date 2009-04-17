@@ -100,7 +100,7 @@ well as forward compatibility for features such as BasicObject.
 == Contrib
 
 Feel free to fork Rext on github, or submit a ticket:
-http://visionmedia.lighthouseapp.com/projects/28074-rext/overview
+http://github.com/visionmedia/rext/issues
 
 == License
 
