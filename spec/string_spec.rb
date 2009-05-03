@@ -4,6 +4,26 @@ require 'rext/string'
 describe String do
   describe "helpers" do
     
+    describe "#word_frequency" do
+      it "should return a hash with word keys and count values" do
+        'mm i love cookies mm'.word_frequency.
+        should == {
+          'mm' => 2,  
+          'i' => 1,  
+          'love' => 1,  
+          'cookies' => 1,  
+        }
+      end
+    end
+    
+    describe "#frequency_of_word" do
+      it "should return the frequency of a word, or 0" do
+        'yum yum ? yes'.frequency_of_word('yum').should == 2
+        'yum yum ? yes'.frequency_of_word('yes').should == 1
+        'yum yum ? yes'.frequency_of_word('no').should == 0
+      end
+    end
+    
     describe "#switchify" do
       it "should return a switch version of the string" do
         'some_foo_bar'.switchify.should == '--some-foo-bar'

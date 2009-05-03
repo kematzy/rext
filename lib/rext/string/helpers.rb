@@ -221,6 +221,35 @@ class String
   end
   
   ##
+  # Return hash of word frequencies.
+  #
+  # === Examples
+  #
+  #   'foo foo bar'.word_frequency 
+  #   # => { 'foo' => 2, 'bar' => 1 }
+  #
+  
+  def word_frequency word = nil
+    split.inject Hash.new(0) do |frequencies, word|
+      frequencies[word] += 1
+      frequencies
+    end
+  end
+  
+  ##
+  # Return frequency of _word_ or 0.
+  #
+  # === Examples
+  #
+  #   'foo foo bar'.frequency_of_word('foo') # => 2
+  #   'foo foo bar'.frequency_of_word('bar') # => 1
+  #
+  
+  def frequency_of_word word
+    word_frequency[word]
+  end
+  
+  ##
   # Returns the switch equivilant of this string.
   #
   # === Examples
