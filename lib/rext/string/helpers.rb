@@ -229,7 +229,7 @@ class String
   #   # => { 'foo' => 2, 'bar' => 1 }
   #
   
-  def word_frequency word = nil
+  def word_frequency
     split.inject Hash.new(0) do |frequencies, word|
       frequencies[word] += 1
       frequencies
