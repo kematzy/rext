@@ -1,4 +1,9 @@
 
+=== 0.1.0 / 2009-05-04
+
+* Added Module#call_method
+* Added String#word_frequency and String#frequency_of_word
+
 === 0.0.8 / 2009-04-13
 
 * Added Array#chunk/in_groups_of

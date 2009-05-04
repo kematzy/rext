@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rext}
-  s.version = "0.0.8"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["TJ Holowaychuk"]
-  s.date = %q{2009-04-13}
+  s.date = %q{2009-05-04}
   s.description = %q{Ruby extensions}
   s.email = %q{tj@vision-media.ca}
   s.extra_rdoc_files = ["lib/rext/all.rb", "lib/rext/array/helpers.rb", "lib/rext/array.rb", "lib/rext/compat/basic_object.rb", "lib/rext/compat.rb", "lib/rext/date/helpers.rb", "lib/rext/date.rb", "lib/rext/enumerable/helpers.rb", "lib/rext/enumerable.rb", "lib/rext/hash/helpers.rb", "lib/rext/hash.rb", "lib/rext/integer/helpers.rb", "lib/rext/integer.rb", "lib/rext/module/helpers.rb", "lib/rext/module.rb", "lib/rext/numeric/bytes.rb", "lib/rext/numeric/time.rb", "lib/rext/numeric.rb", "lib/rext/object/helpers.rb", "lib/rext/object/metaclass.rb", "lib/rext/object.rb", "lib/rext/proc/helpers.rb", "lib/rext/proc.rb", "lib/rext/string/escape.rb", "lib/rext/string/helpers.rb", "lib/rext/string.rb", "lib/rext/time/helpers.rb", "lib/rext/time.rb", "lib/rext/version.rb", "lib/rext.rb", "README.rdoc", "tasks/benchmark.rake", "tasks/docs.rake", "tasks/gemspec.rake", "tasks/spec.rake"]
@@ -16,12 +16,12 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Rext", "--main", "README.rdoc"]
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{rext}
-  s.rubygems_version = %q{1.3.1}
+  s.rubygems_version = %q{1.3.2}
   s.summary = %q{Ruby extensions}
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
-    s.specification_version = 2
+    s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
     else
