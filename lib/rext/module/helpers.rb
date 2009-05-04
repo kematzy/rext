@@ -41,7 +41,7 @@ class Module
       define_method :method_missing do |meth, *args|
         if options[:if].is_a?(Regexp) && meth.to_s =~ options[:if]
           send method, *($~.captures + args)
-        elsif options[:if].call(meth, *args)
+        elsif options[:if].respond_to?(:call) && options[:if].call(meth, *args)
           send method, *args
         else
           super
