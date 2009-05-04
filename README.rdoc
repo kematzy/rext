@@ -93,7 +93,7 @@ Below are the methods currently provided by Rext.
 
 * Enumerable
   - group_by
-  - every ( Copyright http://github.com/mynyml )
+  - every
 
 == Compatibility
 
