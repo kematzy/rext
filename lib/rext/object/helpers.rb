@@ -15,7 +15,7 @@ class Object
   #
   
   def indifferent_hash
-    Hash.new { |hash,key| hash[key.to_s] if key.is_a? Symbol }
+    Hash.new { |hash, key| hash[key.to_s] if key.is_a? Symbol }
   end
   
 end

@@ -3,33 +3,19 @@ require 'rext/module'
 
 describe Module do
   describe "helpers" do
-    describe "#chain" do
-      it "should allow chaining via super" do
-        class Foo
-          def method_missing meth
-            if meth.to_s =~ /^say_(\w+)/
-              "said #{$1}"
-            else
-              super
-            end
-          end
+    describe "#proxy_method" do
+      it "should implement method_missing, passing regexp captures and arguments to the handler method" do
+        class FooBar
+          call_method :find, :if => /^find_by_(\w+)_(\w+)/
+          call_method :delete, :if => lambda { |meth, *args| meth.to_s =~ /^delete_by_(\w+)_(\w+)/ }
+          def find *args; args end
+          def delete *args; args; end
         end
-        
-        class Foo
-          chain {
-            def method_missing meth
-              if meth.to_s =~ /^ask_for_(\w+)/
-                "asked for #{$1}"
-              else
-                super
-              end
-            end
-          }
-        end
-        
-        Foo.new.ask_for_array.should == 'asked for array'
-        Foo.new.say_hello.should == 'said hello'
-        lambda { Foo.new.does_not_exist }.should raise_error(NoMethodError)
+        foo = FooBar.new
+        foo.find_by_user_email.should == ['user', 'email']
+        foo.find_by_user_name('foo').should == ['user', 'name', 'foo']
+        foo.delete_by_user_name('foo', 'bar').should == ['foo', 'bar']
+        lambda { foo.does_not_exist }.should raise_error(NoMethodError)
       end
     end
   end
