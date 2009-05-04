@@ -60,6 +60,8 @@ Below are the methods currently provided by Rext.
   - files
   - path
   - switchify
+  - word_frequency
+  - frequency_of_word
 
 * Integer
   - ordanalize
@@ -84,6 +86,7 @@ Below are the methods currently provided by Rext.
 
 * Module
   - chain
+  - call_method
 
 * Proc
   - yield_or_eval
