@@ -50,4 +50,20 @@ describe Object do
       end
     end
   end
+  
+  describe "#returning" do
+    it "should return the value given to it" do
+      def frequency_of enum
+        returning Hash.new(0) do |hash|
+          enum.each do |value|
+            hash[value] += 1
+          end
+        end
+      end
+      frequency_of(%w( foo bar foo foo )).should == {
+        'foo' => 3,
+        'bar' => 1,
+      }
+    end
+  end
 end

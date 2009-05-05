@@ -18,4 +18,24 @@ class Object
     Hash.new { |hash, key| hash[key.to_s] if key.is_a? Symbol }
   end
   
+  ##
+  # Yeild and return +value+.
+  #
+  # === Examples
+  #
+  #   people = []
+  #   people << 'tj'
+  #   people << 'foo'
+  #
+  #   returning [] do |people|
+  #     people << 'tj'
+  #     people << 'foo'
+  #   end
+  #
+  
+  def returning value, &block
+    yield value
+    value
+  end
+  
 end
