@@ -51,13 +51,13 @@ class Array
   #
   
   def chunk n, pad_with = nil, &block
-    chunks = []
-    each_slice n do |chunk|
-      chunk.pad n, pad_with unless pad_with == false
-      yield chunk if block
-      chunks << chunk
+    returning [] do |chunks|
+      each_slice n do |chunk|
+        chunk.pad n, pad_with unless pad_with == false
+        yield chunk if block
+        chunks << chunk
+      end
     end
-    chunks
   end
   alias :in_groups_of :chunk
   
