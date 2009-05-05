@@ -19,7 +19,7 @@ class Object
   end
   
   ##
-  # Yeild and return +value+.
+  # Yield and return +value+.
   #
   # === Examples
   #

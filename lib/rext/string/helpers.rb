@@ -249,6 +249,8 @@ class String
     word_frequency[word]
   end
   
+  class InvalidSwitchError < StandardError; end
+  
   ##
   # Returns the switch equivilant of this string.
   #
@@ -260,8 +262,6 @@ class String
   #  ''.switchify                # => InvalidSwitchError
   #
   
-  class InvalidSwitchError < StandardError; end
-
   def switchify
     raise InvalidSwitchError, 'switch must have a length > 0' if length.zero?
     length > 1 ? "--#{dasherize}" : "-#{self}"
