@@ -18,5 +18,23 @@ describe Module do
         lambda { foo.does_not_exist }.should raise_error(NoMethodError)
       end
     end
+    
+    describe "#setup" do
+      it "should define included instance evaluated in context to the module passed" do
+        module BarFoo
+          setup do
+            include InstanceMethods
+          end
+          
+          module InstanceMethods
+            def bar_foo
+              'wahoo'
+            end 
+          end
+        end
+        FooBar.send :include, BarFoo
+        FooBar.new.bar_foo.should == 'wahoo'
+      end
+    end
   end
 end

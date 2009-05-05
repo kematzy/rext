@@ -1,4 +1,6 @@
 
+require 'rext/object/metaclass'
+
 class Module
   
   ##
@@ -48,6 +50,29 @@ class Module
         end
       end
     }
+  end
+  
+  ##
+  # Equivalent to defining self.included and
+  # instance evaluating the module passed.
+  #
+  # === Examples
+  #
+  #   def self.included mod
+  #     mod.instance_eval do
+  #       include InstanceMethods
+  #     end
+  #   end
+  #   
+  #   setup do 
+  #     include InstanceMethods
+  #   end
+  #
+  
+  def setup &block
+    meta_def :included do |mod|
+      mod.instance_eval &block
+    end
   end
   
 end
