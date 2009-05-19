@@ -17,4 +17,14 @@ describe Numeric do
       end
     end
   end
+  
+  describe "bytes" do
+    it "should return bytes, kilobytes, megabytes, gigabytes, and terabytes" do
+      5.bytes.should == 5
+      5.kilobytes.should == 5120
+      5.megabytes.should == 5242880
+      5.gigabytes.should == 5368709120
+      5.terabytes.should == 5497558138880
+    end
+  end
 end
