@@ -1,4 +1,10 @@
 
+=== 0.1.1 / 2009-06-10
+
+* Removed sketchy BasicObject #method_added hack for now
+* Added Module#setup
+* Added / Implemented Object#returning
+
 === 0.1.0 / 2009-05-04
 
 * Added Module#call_method
