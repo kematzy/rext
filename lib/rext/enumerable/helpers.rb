@@ -20,7 +20,9 @@ module Enumerable
   # * Enumerable#proxy
   #
   
-  class Proxy < BasicObject
+  class Proxy 
+    instance_methods.each { |m| undef_method m unless m.match(/^__/) }
+    
     def initialize object, meth
       @object, @method = object, meth
     end

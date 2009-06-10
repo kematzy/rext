@@ -97,11 +97,6 @@ Below are the methods currently provided by Rext.
   - includes_all?
   - every
 
-== Compatibility
-
-Rext provides methods which support Ruby 1.8.x and 1.9.x, as
-well as forward compatibility for features such as BasicObject.
-
 == Contrib
 
 Feel free to fork Rext on github, or submit a ticket:
