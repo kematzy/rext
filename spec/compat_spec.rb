@@ -16,13 +16,7 @@ describe Rext do
       it "should preserve __* methods" do
         lambda { @object.__send__ }.should_not raise_error(NoMethodError)
       end
-      
-      it "should now allow additional ancestor methods to be accessed" do
-        module Kernel; def foo; end end
-        class Object; def foo; end end
-        lambda { @object.foo }.should raise_error(NoMethodError)
-      end
-      
+
     end
   end
 end
