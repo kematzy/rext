@@ -94,6 +94,7 @@ Below are the methods currently provided by Rext.
 
 * Enumerable
   - group_by
+  - includes_all?
   - every
 
 == Compatibility

@@ -3,6 +3,17 @@ require 'rext/enumerable'
 
 describe Enumerable do
   describe "helpers" do
+    describe "#includes_all?" do
+      it "should return true when all arguments are present" do
+        [1,2,3].includes_all?(1,2).should be_true
+      end
+      
+      it "should return true when not all arguments are present" do
+        [1,1,3,3,4].includes_all?(1,3,6).should be_false
+        [1,1,3,3,4].includes_all?(6,3,1).should be_false
+      end
+    end
+    
     describe "#group_by" do
       before :each do
         @enum = 'foo', :bar, 1, 2, 3

@@ -71,4 +71,17 @@ module Enumerable
     block ? proxy(:map).instance_eval(&block) : proxy(:map)
   end
   
+  ##
+  # Check if all +args+ are included.
+  #
+  # === Examples
+  #    
+  #   permissions = 'save', 'edit', 'delete'
+  #   permissions.includes_all? 'save', 'edit'    # => true
+  #
+  
+  def includes_all? *args
+    args.all? { |arg| include? arg }
+  end
+  
 end
