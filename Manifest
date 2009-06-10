@@ -4,8 +4,6 @@ History.rdoc
 lib/rext/all.rb
 lib/rext/array/helpers.rb
 lib/rext/array.rb
-lib/rext/compat/basic_object.rb
-lib/rext/compat.rb
 lib/rext/date/helpers.rb
 lib/rext/date.rb
 lib/rext/enumerable/helpers.rb
@@ -36,7 +34,6 @@ Rakefile
 README.rdoc
 rext.gemspec
 spec/array_spec.rb
-spec/compat_spec.rb
 spec/date_spec.rb
 spec/enumerable_spec.rb
 spec/hash_spec.rb
