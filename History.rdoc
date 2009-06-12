@@ -1,4 +1,8 @@
 
+=== 0.2.2 / 2009-06-12
+
+* Fixed require for libs previously removed
+
 === 0.2.1 / 2009-06-10
 
 * Removed BasicObject due to compatibility issues with other libraries
