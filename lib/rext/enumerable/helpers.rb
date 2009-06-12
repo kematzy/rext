@@ -1,5 +1,4 @@
 
-require 'rext/compat/basic_object'
 require 'rext/module/helpers'
 require 'rext/proc/helpers'
 
