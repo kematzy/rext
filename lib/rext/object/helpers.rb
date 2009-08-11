@@ -38,6 +38,19 @@ class Object
     value
   end
   
+  ##
+  # Retry a _block_ of statements upto a number of _times_.
+  # When no error is raised the value returned by _block_ is 
+  # simply returned.
+  #
+  # === Examples
+  #
+  #   try 3 do
+  #     open 'http://vision-media.ca'
+  #   end
+  #   # => allows 3 tries to fetch the response
+  #
+  
   def try times = 1, options = {}, &block
     val = yield
   rescue options[:on] || Exception

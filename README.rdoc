@@ -38,6 +38,7 @@ Below are the methods currently provided by Rext.
   - meta_eval
   - indifferent_hash
   - returning
+  - try
 
 * String
   - url_encode
