@@ -1,4 +1,5 @@
 
+require File.dirname(__FILE__) + '/spec_helper'
 require 'rext/module'
 
 describe Module do

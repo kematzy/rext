@@ -1,4 +1,5 @@
 
+require File.dirname(__FILE__) + '/spec_helper'
 require 'rext/hash'
 
 describe Hash do
@@ -20,7 +21,7 @@ describe Hash do
       end
       
       it "should stringify numbers and symbols" do
-        { :interval => 15, :icon => :jpeg }.switchify.should == ['--interval', '15', '--icon', 'jpeg']
+        { :interval => 15, :icon => :jpeg }.switchify.sort.should == ['--icon', '--interval', '15', 'jpeg']
       end
       
       it "should work with little switches" do
