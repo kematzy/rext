@@ -3,20 +3,7 @@ require File.dirname(__FILE__) + '/spec_helper'
 require 'rext/string'
 
 describe String do
-  describe "helpers" do
-    
-    describe "#word_frequency" do
-      it "should return a hash with word keys and count values" do
-        'mm i love cookies mm'.word_frequency.
-        should == {
-          'mm' => 2,  
-          'i' => 1,  
-          'love' => 1,  
-          'cookies' => 1,  
-        }
-      end
-    end
-    
+  describe "encode" do
     describe "#to_md5" do
       it "should return an md5 hash" do
         'test'.to_md5.should == '098f6bcd4621d373cade4e832627b4f6'
@@ -32,7 +19,34 @@ describe String do
         'test'.to_sha512.should_not == 'tests'.to_sha512
       end
     end
-        
+    
+    describe "#base64_encode" do
+      it "should base64 encode a string" do
+        'tj'.base64_encode.should == 'dGo='
+        "foo \n bar\n\n".base64_encode.base64_decode.should == "foo \n bar\n\n"
+      end
+    end
+    
+    describe "#base64_decode" do
+      it "should decode a base64 string" do
+        'dGo='.base64_decode.should == 'tj'
+      end
+    end
+  end
+  
+  describe "helpers" do
+    describe "#word_frequency" do
+      it "should return a hash with word keys and count values" do
+        'mm i love cookies mm'.word_frequency.
+        should == {
+          'mm' => 2,  
+          'i' => 1,  
+          'love' => 1,  
+          'cookies' => 1,  
+        }
+      end
+    end
+    
     describe "#frequency_of_word" do
       it "should return the frequency of a word, or 0" do
         'yum yum ? yes'.frequency_of_word('yum').should == 2
@@ -52,19 +66,6 @@ describe String do
       
       it "should raise an InvalidSwitchError when length 0" do
         lambda { ''.switchify }.should raise_error(String::InvalidSwitchError)
-      end
-    end
-    
-    describe "#base64_encode" do
-      it "should base64 encode a string" do
-        'tj'.base64_encode.should == 'dGo='
-        "foo \n bar\n\n".base64_encode.base64_decode.should == "foo \n bar\n\n"
-      end
-    end
-    
-    describe "#base64_decode" do
-      it "should decode a base64 string" do
-        'dGo='.base64_decode.should == 'tj'
       end
     end
     

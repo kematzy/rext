@@ -63,6 +63,8 @@ Below are the methods currently provided by Rext.
   - switchify
   - word_frequency
   - frequency_of_word
+  - to_md5
+  - to_sha512
 
 * Integer
   - ordanalize
