@@ -17,6 +17,22 @@ describe String do
       end
     end
     
+    describe "#to_md5" do
+      it "should return an md5 hash" do
+        'test'.to_md5.should == '098f6bcd4621d373cade4e832627b4f6'
+        'test'.to_md5.should == 'test'.to_md5
+        'test'.to_md5.should_not == 'tests'.to_md5
+      end
+    end
+    
+    describe "#to_sha512" do
+      it "should return an md5 hash" do
+        'test'.to_sha512.should == 'ee26b0dd4af7e749aa1a8ee3c10ae9923f618980772e473f8819a5d4940e0db27ac185f8a0e1d5f84f88bc887fd67b143732c304cc5fa9ad8e6f57f50028a8ff'
+        'test'.to_sha512.should == 'test'.to_sha512
+        'test'.to_sha512.should_not == 'tests'.to_sha512
+      end
+    end
+        
     describe "#frequency_of_word" do
       it "should return the frequency of a word, or 0" do
         'yum yum ? yes'.frequency_of_word('yum').should == 2
