@@ -38,4 +38,12 @@ class Object
     value
   end
   
+  def try times = 1, options = {}, &block
+    val = yield
+  rescue options[:on] || Exception
+    retry if (times -= 1) > 0
+  else
+    val
+  end
+  
 end

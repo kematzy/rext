@@ -52,6 +52,37 @@ describe Object do
     end
   end
   
+  describe "#try" do
+    it "should try the block once with no args" do
+      times = 0
+      try { times += 1 }
+      times.should == 1
+    end
+    
+    it "should try the block multiple times when failing" do
+      times = 0
+      try(3) { times += 1; raise 'foo' }
+      times.should == 3
+    end
+    
+    it "should try the block one time when succesful" do
+      times = 0
+      try(3) { times += 1 }
+      times.should == 1
+    end
+    
+    it "should return the value returned by the block" do
+      val = try(3) { 'test' }
+      val.should == 'test'
+    end
+    
+    it "should allow specific exceptions to be rescued" do
+      lambda { try(3){ raise ArgumentError, 'foo' } }.should_not raise_error
+      lambda { try(3, :on => ArgumentError){ raise ArgumentError, 'foo' } }.should_not raise_error
+      lambda { try(3, :on => TypeError){ raise ArgumentError, 'foo' } }.should raise_error(ArgumentError)
+    end
+  end
+  
   describe "#returning" do
     it "should return the value given to it" do
       def frequency_of enum
