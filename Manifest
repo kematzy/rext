@@ -22,7 +22,7 @@ lib/rext/object/metaclass.rb
 lib/rext/object.rb
 lib/rext/proc/helpers.rb
 lib/rext/proc.rb
-lib/rext/string/escape.rb
+lib/rext/string/encode.rb
 lib/rext/string/helpers.rb
 lib/rext/string.rb
 lib/rext/time/helpers.rb
@@ -41,6 +41,7 @@ spec/integer_spec.rb
 spec/module_spec.rb
 spec/numeric_spec.rb
 spec/object_spec.rb
+spec/spec.opts
 spec/spec_helper.rb
 spec/string_spec.rb
 spec/time_spec.rb

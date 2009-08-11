@@ -1,4 +1,10 @@
 
+=== 0.3.0 / 2009-08-11
+
+* Moved some string encoding related methods to string/encode.rb
+* Added String#to_md5 and String#to_sha512
+* Added autospec support
+
 === 0.2.2 / 2009-06-12
 
 * Fixed require for libs previously removed
