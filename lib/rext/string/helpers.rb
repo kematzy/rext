@@ -1,7 +1,5 @@
 
 require 'extlib'
-require 'digest/sha2'
-require 'digest/md5'
 
 class String
   
