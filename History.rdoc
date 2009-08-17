@@ -1,4 +1,9 @@
 
+=== 0.3.1 / 2009-08-17
+
+* Added #try
+* Fixed some requires
+
 === 0.3.0 / 2009-08-11
 
 * Moved some string encoding related methods to string/encode.rb
