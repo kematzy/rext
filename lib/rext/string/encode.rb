@@ -14,7 +14,7 @@ class String
   #
   
   def to_md5
-    Digest::MD5.hexdigest self
+    ::Digest::MD5.hexdigest self
   end
   
   ##
@@ -26,7 +26,7 @@ class String
   #
   
   def to_sha512
-    Digest::SHA512.hexdigest self
+    ::Digest::SHA512.hexdigest self
   end
   
   ##
