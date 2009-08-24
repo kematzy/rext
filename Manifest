@@ -25,6 +25,8 @@ lib/rext/proc.rb
 lib/rext/string/encode.rb
 lib/rext/string/helpers.rb
 lib/rext/string.rb
+lib/rext/symbol/helpers.rb
+lib/rext/symbol.rb
 lib/rext/time/helpers.rb
 lib/rext/time.rb
 lib/rext/version.rb
@@ -44,6 +46,7 @@ spec/object_spec.rb
 spec/spec.opts
 spec/spec_helper.rb
 spec/string_spec.rb
+spec/symbol_spec.rb
 spec/time_spec.rb
 tasks/benchmark.rake
 tasks/docs.rake
