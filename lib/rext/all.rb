@@ -4,6 +4,7 @@
 #++
 
 require 'rext'
+require 'rext/symbol'
 require 'rext/object'
 require 'rext/module'
 require 'rext/proc'

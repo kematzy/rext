@@ -99,6 +99,9 @@ Below are the methods currently provided by Rext.
   - group_by
   - includes_all?
   - every
+  
+* Symbol
+  - to_proc
 
 == Contrib
 
