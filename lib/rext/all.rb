@@ -3,7 +3,7 @@
 # Load all extensions.
 #++
 
-require 'rext'
+require 'rext/version'
 require 'rext/symbol'
 require 'rext/object'
 require 'rext/module'
